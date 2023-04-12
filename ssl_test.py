@@ -54,7 +54,7 @@ print('first :', ll.first()) # first : 5
 print('next :', ll.next()) # next : 2
 print('size :', ll.size()) # size : 7
 print('delete :', ll.delete()) # delete : 2
-# delete : None ?
+# delete : None ? -> delete() 메소드의 return 값 인덴트를 바꾸면서 해결 
 print('size :', ll.size()) # size : 6
 # size : 7
 print('current:', ll.current.data)# current: 5

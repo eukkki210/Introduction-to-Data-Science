@@ -42,7 +42,7 @@ class LinkedList:
 
 			self.num_of_data -= 1
 
-			return pop_data
+		return pop_data
 
 	# first 메소드 (search1 - 맨 앞의 노드 검색, before, current 변경)
 	def first(self):
