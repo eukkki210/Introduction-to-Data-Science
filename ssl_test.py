@@ -38,4 +38,34 @@ if __name__ == '__main__':
     # 예상 출력: 해당하는 원소가 없습니다.\nhead ->(100) -> (500) -> (325) -> null
     # 실제 출력: �ش��ϴ� ���Ұ� �����ϴ�.\nhead ->(100) -> (500) -> (325) -> null
 
+# pdf에 있는 테스트 코드
+if __name__ == '__main__':
+    ll = LinkedList()
+    ll.append(5)
+    ll.append(2)
+    ll.append(1)
+    ll.append(2)
+    ll.append(7)
+    ll.append(2)
+    ll.append(11)
+    ll.traverse_all()
+
+print('first :', ll.first()) # first : 5
+print('next :', ll.next()) # next : 2
+print('size :', ll.size()) # size : 7
+print('delete :', ll.delete()) # delete : 2
+# delete : None ?
+print('size :', ll.size()) # size : 6
+# size : 7
+print('current:', ll.current.data)# current: 5
+# current : 2
+print('tail:', ll.tail.data) # tail: 11
+print('first :', ll.first()) # first : 5
+print('next :', ll.next()) # next : 1
+# next : 2
+print('next :', ll.next()) # next : 2
+# next : 1
+print('next :', ll.next()) # next : 7
+# next : 2
+
     
