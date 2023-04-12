@@ -40,7 +40,9 @@ class LinkedList:
 			self.before.next = self.current.next
 			self.current = self.before 
 
-			self.num_of_data -= 1
+		self.num_of_data -= 1
+
+		self.first()
 
 		return pop_data
 

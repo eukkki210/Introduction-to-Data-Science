@@ -54,11 +54,11 @@ print('first :', ll.first()) # first : 5
 print('next :', ll.next()) # next : 2
 print('size :', ll.size()) # size : 7
 print('delete :', ll.delete()) # delete : 2
-# delete : None ? -> delete() 메소드의 return 값 인덴트를 바꾸면서 해결 
+# 실제 출력 결과: delete : None -> delete() 메소드의 return 값 인덴트를 바꾸면서 해결 
 print('size :', ll.size()) # size : 6
-# size : 7
+# 실제 출력 결과: size : 7 -> 위와 같은 방법으로 해결
 print('current:', ll.current.data)# current: 5
-# current : 2
+# 실제 출력 결과: current : 2 -> 초기화가 되지 않은 듯 -> delete() 메소드의 마지막에 self.first() 호출
 print('tail:', ll.tail.data) # tail: 11
 print('first :', ll.first()) # first : 5
 print('next :', ll.next()) # next : 1
@@ -67,5 +67,6 @@ print('next :', ll.next()) # next : 2
 # next : 1
 print('next :', ll.next()) # next : 7
 # next : 2
+# ==> self.current = self.before 코드를 수행하면서 가리키는 node가 변경된 문제 line 61에서 모두 해결
 
     
