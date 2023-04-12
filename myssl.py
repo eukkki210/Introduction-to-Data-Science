@@ -140,6 +140,6 @@ class LinkedList:
 				self.before = cur_node
 				cur_node = cur_node.next
 		if del_cnt == 0:
-			print("해당하는 원소가 없습니다.")
+			print("해당하는 원소가 없습니다.", encoding="utf-8")
 		else:
-			print(f"{key}번째 원소(key)를 삭제합니다.")
+			print(f"{key}번째 원소(key)를 삭제합니다.", encoding="utf-8")
