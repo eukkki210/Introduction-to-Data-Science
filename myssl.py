@@ -33,7 +33,7 @@ class LinkedList:
 	def delete(self):
 		pop_data = self.current.data
 
-		if self.current is self.tail:
+		if self.current == self.tail:
 			self.tail = self.before
 
 			# 중요 : current가 next가 아닌 before로 변경된다.
@@ -59,6 +59,9 @@ class LinkedList:
 	def next(self):
 		if self.current.next == None:
 			return None
+		
+		if self.current == None:
+			self.first()
 
 		self.before = self.current
 		self.current = self.current.next
@@ -69,18 +72,22 @@ class LinkedList:
 	def size(self):
 		return self.num_of_data 
 	
-	# traverse_all 메소드 (search3 - 순차적으로 모든 원소 탐색, 각 노드의 data print, 이전에 first 메소드가 한번은 실행되어야 함)
+	# traverse_all 메소드 (search3 - 순차적으로 모든 원소 탐색, 각 노드의 data print)
 	def traverse_all(self):
 		if self.num_of_data == 0:
 			return None
+		
+		# 현재 node가 None이면 처음 노드로 이동
+		if self.current == None:
+			self.first()
 		
 		print("head -> ", end="")
 		# 현재 노드를 가리키는 변수 초기화 (변수 사용하지 않으면 while문이 무한 루프에 빠짐)
 		cur_node = self.current
 		# 현재 노드 (헤드 노드의 다음 노드)가 None이 아닐 때까지 반복하여 현재 노드의 데이터 출력
-		while cur_node is not None:
+		while cur_node != None:
 			print(f"({cur_node.data})", end="")
-			if cur_node.next is not None:
+			if cur_node.next != None:
 				print(" -> ", end="")
 			# 다음 노드가 없을 때(null), 즉 연결리스트의 마지막 노드일 때 "-> null"출력
 			else:
@@ -123,11 +130,11 @@ class LinkedList:
 			return None
 		cur_node = self.current
 		# 리스트 전체 탐색 (cur_node가 None이 되면 끝까지 탐색한 것)
-		while cur_node is not None:
+		while cur_node != None:
 			# 삭제할 node 발견
 			if cur_node.data == key:
 				# 삭제할 node가 첫 번째 node일 경우
-				if cur_node is self.current:
+				if cur_node == self.current:
 					self.current = cur_node.next
 					cur_node = self.current
 				# 삭제할 node가 중간에 위치하는 경우
@@ -147,5 +154,5 @@ class LinkedList:
 		else:
 			print(f"{idx-1}번째 원소(key)를 삭제합니다.")
 
-# 항상 first 함수를 먼저 호출해야 하는 함수들을 어떻게 하면 해결할 수 있을까?
-# self.current가 None일 대 first() 함수를 호출하도록 수정?
+# 항상 first 메소드를 먼저 호출해야 하는 메소드들을 어떻게 하면 해결할 수 있을까?
+# self.current가 None일 대 first() 메소드를 호출하도록 수정?
