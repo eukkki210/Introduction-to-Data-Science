@@ -142,4 +142,4 @@ class LinkedList:
 		if del_cnt == 0:
 			print("해당하는 원소가 없습니다.")
 		else:
-			print(f"{key}번째 원소(key)를 삭제합니다.")
+			print(f"{idx}번째 원소(key)를 삭제합니다.")
