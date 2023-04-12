@@ -74,7 +74,7 @@ class LinkedList:
 		if self.num_of_data == 0:
 			return None
 		
-		print("head ->", end="")
+		print("head -> ", end="")
 		# 현재 노드를 가리키는 변수 초기화 (변수 사용하지 않으면 while문이 무한 루프에 빠짐)
 		cur_node = self.current
 		# 현재 노드 (헤드 노드의 다음 노드)가 None이 아닐 때까지 반복하여 현재 노드의 데이터 출력
