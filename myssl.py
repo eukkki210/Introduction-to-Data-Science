@@ -116,7 +116,7 @@ class LinkedList:
 	def remove(self, key):
 		# 처리 결과 출력을 위해 삭제된 원소 개수 카운트
 		del_cnt = 0
-		# 몇 번째 원소인지 알기 위해 idx 변수 정의
+		# 몇 번째 원소인지 알기 위해 idx 변수 선언
 		idx = 0
 		# 빈 리스트일 경우 메소드 종료
 		if self.num_of_data == 0:
@@ -145,4 +145,4 @@ class LinkedList:
 		if del_cnt == 0:
 			print("해당하는 원소가 없습니다.")
 		else:
-			print(f"{idx}번째 원소(key)를 삭제합니다.")
+			print(f"{idx-1}번째 원소(key)를 삭제합니다.")
