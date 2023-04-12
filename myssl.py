@@ -146,3 +146,6 @@ class LinkedList:
 			print("해당하는 원소가 없습니다.")
 		else:
 			print(f"{idx-1}번째 원소(key)를 삭제합니다.")
+
+# 항상 first 함수를 먼저 호출해야 하는 함수들을 어떻게 하면 해결할 수 있을까?
+# self.current가 None일 대 first() 함수를 호출하도록 수정?
