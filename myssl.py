@@ -123,7 +123,7 @@ class LinkedList:
 		# 리스트 전체 탐색 (cur_node가 None이 되면 끝까지 탐색한 것)
 		while cur_node is not None:
 			# 삭제할 node 발견
-			if cur_node == key:
+			if cur_node.data == key:
 				# 삭제할 node가 첫 번째 node일 경우
 				if cur_node is self.current:
 					self.current = cur_node.next
@@ -140,6 +140,6 @@ class LinkedList:
 				self.before = cur_node
 				cur_node = cur_node.next
 		if del_cnt == 0:
-			print("해당하는 원소가 없습니다.", encoding="utf-8")
+			print("해당하는 원소가 없습니다.")
 		else:
-			print(f"{key}번째 원소(key)를 삭제합니다.", encoding="utf-8")
+			print(f"{key}번째 원소(key)를 삭제합니다.")
