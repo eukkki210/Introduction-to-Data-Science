@@ -39,6 +39,9 @@ class LinkedList:
 			# 중요 : current가 next가 아닌 before로 변경된다.
 			self.before.next = self.current.next
 			self.current = self.before 
+		
+		else:
+			self.before.next = self.current.next
 
 		self.num_of_data -= 1
 		
@@ -60,10 +63,11 @@ class LinkedList:
 	# next 메소드 (search2 - current 노드의 다음 노드 검색)
 	def next(self):
 		if self.current.next == None:
+			self.current = None
 			return None
 		
 		if self.current == None:
-			self.first()
+			return None
 
 		self.before = self.current
 		self.current = self.current.next
@@ -118,6 +122,8 @@ class LinkedList:
 			cur_pos += 1
 		self.before.next = new_node
 		new_node.next = self.current
+
+		self.first()
 
 		self.num_of_data += 1
 

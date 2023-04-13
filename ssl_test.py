@@ -84,4 +84,7 @@ while True:
         break
 # 예상 출력 결과: 5 1 2 7 2 11
 # 실제 출력 결과: 5 2 1 2 7 2 11
-# 뭐가 문제지..?
+# 뭐가 문제지..? -> 위에서 delete할 때 삭제가 안된듯?
+# -> delete 메소드에 else문 추가: 삭제하려는 node가 tail일 때
+# next 메소드에서도 현재 node가 None일 경우 다음 node를 찾지 않고 None을 반환하도록 수정
+# 구글링을 통해 solution을 찾긴 했지만 100% 완벽히 이해X => review 필요
