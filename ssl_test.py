@@ -88,3 +88,24 @@ while True:
 # -> delete 메소드에 else문 추가: 삭제하려는 node가 tail일 때
 # next 메소드에서도 현재 node가 None일 경우 다음 node를 찾지 않고 None을 반환하도록 수정
 # 구글링을 통해 solution을 찾긴 했지만 100% 완벽히 이해X => review 필요
+
+# 2만 삭제하기
+data = ll.first()
+
+if data and data == 2:
+    ll.delete()
+    print('deleted', end=' ')
+else:
+    print(data, end= ' ')
+
+while True:
+    data = ll.next()
+    if data == 2:
+        ll.delete()
+        print('deleted', end=' ')
+    elif data:
+        print(data, end=' ')
+    else:
+        break
+# 예상 출력 결과: 5 1 deleted 7 deleted 11
+# 실제 출력 결과: 5 1 deleted 1 7 deleted 1 7 11
