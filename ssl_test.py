@@ -109,3 +109,5 @@ while True:
         break
 # 예상 출력 결과: 5 1 deleted 7 deleted 11
 # 실제 출력 결과: 5 1 deleted 1 7 deleted 1 7 11
+# next가 문젠가? -> delete 메소드에 first 메소드를 호출하도록 바꾼 부분이 문제였던 것으로 파악
+

@@ -45,7 +45,8 @@ class LinkedList:
 
 		self.num_of_data -= 1
 		
-		self.first()
+		if self.current == None:
+			self.first()
 
 		return pop_data
 
@@ -62,11 +63,11 @@ class LinkedList:
 
 	# next 메소드 (search2 - current 노드의 다음 노드 검색)
 	def next(self):
-		if self.current.next == None:
-			self.current = None
+		if self.current == None:
 			return None
 		
-		if self.current == None:
+		if self.current.next == None:
+			self.current = None
 			return None
 
 		self.before = self.current
