@@ -141,6 +141,7 @@ class LinkedList:
 		idx = 0
 		# 빈 리스트일 경우 메소드 종료
 		if self.num_of_data == 0:
+			print("해당하는 원소가 없습니다.")
 			return None
 		cur_node = self.current
 		# 리스트 전체 탐색 (cur_node가 None이 되면 끝까지 탐색한 것)
