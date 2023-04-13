@@ -1,3 +1,5 @@
+# 201701257 브라질학과/Software&AI 류승기
+
 # 테스트 코드
 from myssl import *
 
@@ -69,4 +71,17 @@ print('next :', ll.next()) # next : 7
 # next : 2
 # ==> self.current = self.before 코드를 수행하면서 가리키는 node가 변경된 문제 line 61에서 모두 해결
 
-    
+# 전체 노드 data 표시하기
+data = ll.first()
+
+if data:
+    print(data, end=' ')
+while True:
+    data = ll.next()
+    if data:
+        print(data, end=' ')
+    else:
+        break
+# 예상 출력 결과: 5 1 2 7 2 11
+# 실제 출력 결과: 5 2 1 2 7 2 11
+# 뭐가 문제지..?
