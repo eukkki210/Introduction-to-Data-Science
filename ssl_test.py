@@ -111,3 +111,18 @@ while True:
 # 실제 출력 결과: 5 1 deleted 1 7 deleted 1 7 11
 # next가 문젠가? -> delete 메소드에 first 메소드를 호출하도록 바꾼 부분이 문제였던 것으로 파악
 
+# 추가 테스트
+
+ll = LinkedList()
+
+# 데이터 추가
+ll.append(1)
+ll.append(2)
+ll.append(3)
+ll.append(4)
+
+# 중간에 데이터 삽입
+ll.insert_at(2, 2.5)
+
+# list 출력
+ll.traverse_all() # haed -> (1) -> (2) -> (2.5) -> (3) -> (4) -> null

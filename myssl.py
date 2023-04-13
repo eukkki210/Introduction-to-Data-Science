@@ -104,8 +104,8 @@ class LinkedList:
 	# insert_at 메소드 (insert2 - 주어진 position에 노드 추가, before과 node의 next, 데이터 개수 변경)
 	def insert_at(self, position, new_data):
 		# position이 1보다 작은 경우 메소드 종료 (error)
-		if position < 1:
-			print("오류: 위치가 1보다 크거나 같아야 합니다.")
+		if position < 1 or position > self.num_of_data + 1:
+			print("오류: position은 1보다 크거나 같고 전체 데이터 수보다 작거나 같아야 합니다.")
 			return None
 		# position이 num_of_data보다 큰 경우, append 메소드를 호출하여 맨 마지막에 new_data 삽입
 		elif position > self.num_of_data:
@@ -121,6 +121,11 @@ class LinkedList:
 			self.before = cur_node
 			self.current = cur_node.next
 			cur_pos += 1
+		# position이 현재 LinkedList에 존재하는 node의 위치 범위에서 벗어나는 경우
+		if cur_pos < position:
+			print("오류: 위치가 올바르지 않습니다.")
+			return None
+
 		self.before.next = new_node
 		new_node.next = self.current
 
@@ -153,6 +158,9 @@ class LinkedList:
 					
 				self.num_of_data -= 1
 				del_cnt += 1
+				# 삭제된 node의 inex를 기록하는 변수를 사용하여 출력
+				print(f"{idx}번째 원소(key)를 삭제합니다.")
+				break
 			# 현재 node의 값이 key와 같지 않다면, 다믐 node로 이동
 			else:
 				self.before = cur_node
@@ -160,8 +168,6 @@ class LinkedList:
 			idx += 1
 		if del_cnt == 0:
 			print("해당하는 원소가 없습니다.")
-		else:
-			print(f"{idx-1}번째 원소(key)를 삭제합니다.")
 
 # 항상 first 메소드를 먼저 호출해야 하는 메소드들을 어떻게 하면 해결할 수 있을까?
 # self.current가 None일 대 first() 메소드를 호출하도록 수정?
