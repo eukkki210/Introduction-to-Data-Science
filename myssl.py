@@ -1,4 +1,5 @@
 # 201701257 브라질학과/Software&AI 류승기
+# 정상동작
 
 # Node 클래스 정의
 class Node:
